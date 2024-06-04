@@ -1,5 +1,9 @@
 import styled from 'styled-components';
 
+const device = {
+    mobile: `(max-width: 768px)`,
+    desktop: `(min-width: 769px)`
+};
 
 export const RoundButton = styled.button`
     position: fixed;
@@ -24,7 +28,20 @@ export const RoundButton = styled.button`
         box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.2); // Schatten beim Hover vergrößern
         transform: translateX(50%) scale(1.1); // Button beim Hover vergrößern
     }
+
+    @media ${device.mobile} {
+            width: 60px;
+            height: 60px;
+            font-size: 30px;
+            line-height: 40px;
+            bottom: 20px; // Ändern Sie die Position nach unten
+            right: 20px; // Ändern Sie die Position nach rechts
+            transform: translateX(0); // Entfernen Sie die horizontale Verschiebung
+            overflow: auto;
+        }
+
 `;
+
 
 export const PageContainer = styled.section`
     position: relative;
@@ -37,6 +54,12 @@ export const PageContainer = styled.section`
     text-align: center;
     letter-spacing: 1px;
     overflow: hidden;
+
+    @media ${device.mobile} {
+        flex-direction: column; // Ändern Sie die Flex-Richtung auf Spalte
+        justify-content: flex-start; // Ändern Sie die Ausrichtung auf den Anfang
+        padding-top: 80px; // Fügen Sie oben einen Abstand hinzu
+    }
 `;
 
 export const BackgroundVideo = styled.video`

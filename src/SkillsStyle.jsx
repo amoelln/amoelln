@@ -1,10 +1,21 @@
 import styled from 'styled-components';
 
+const device = {
+    mobile: `(max-width: 768px)`
+};
 
 export const CardContainer = styled.div`
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+
+    
+    @media ${device.mobile} {
+        flex-direction: column;
+        align-items: center;
+
+    }
+
 `;
 
 export const Card = styled.div`
@@ -15,24 +26,41 @@ export const Card = styled.div`
     margin: 40px;
     background-color: rgba(255, 255, 255, 0.8);
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+
+    @media ${device.mobile} {
+        max-width: 90%;
+        margin: 0px;
+    }
+
 `;
 export const Title1 = styled.h1`
-    font-size: 2em;
+    font-size: 1.5em;
     font-family: 'Arial', sans-serif;
     margin-bottom: 30px;
     
     text-transform: uppercase;
     letter-spacing: 0.1em;  
+
+    @media ${device.mobile} {
+        font-size: 1.2em;
+        margin-bottom: 20px;
+    }
     `;
 
 
 export const Title = styled.h2`
-    font-size: 2em;
+    font-size: 1.5em;
     font-family: 'Arial', sans-serif;
     margin-bottom: 30px;
     color: #000;
     text-transform: uppercase;
     letter-spacing: 0.1em;
+
+    @media ${device.mobile} {
+        font-size: 1.2em;
+        margin-bottom: 20px;
+    }
+
 `;
 
 export const Item = styled.li`
@@ -42,4 +70,9 @@ export const Item = styled.li`
     color: #000;
     text-transform: uppercase;
     letter-spacing: 0.7em;
+
+    @media ${device.mobile} {
+        font-size: 0.9em;
+        margin-bottom: 30px;
+    }
 `;

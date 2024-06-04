@@ -28,7 +28,6 @@ function Homepage() {
             <Title>Web Developer.</Title>
             <Title>Full Stack Developer.</Title>
             <Title>Front-End Developer.</Title>
-            <Title>Back-End Developer.</Title>
         </Slide>
         <Fade delay={500}>
             <Subtitle>{t('Webentwicklerin mit einer Leidenschaft für die Erstellung moderner und dynamischer Webseiten.')}</Subtitle>

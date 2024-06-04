@@ -1,5 +1,8 @@
 import styled from "styled-components";
 
+const device = {
+    mobile: `(max-width: 768px)`
+};
 
 
 export const RoundButton2 = styled.button`
@@ -24,6 +27,17 @@ export const RoundButton2 = styled.button`
         background-color: rgba(255, 255, 255, 0.7); // Hover-Effekt hinzufügen
         box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.2); // Schatten beim Hover vergrößern
         transform: translateX(50%) scale(1.1); // Button beim Hover vergrößern
+    }
+    @media ${device.mobile} {
+        width: 60px;
+        height: 60px;
+        font-size: 30px;
+        line-height: 40px;
+        bottom: 20px; // Ändern Sie die Position nach unten
+        right: 20px; // Ändern Sie die Position nach rechts
+        transform: translateX(0); // Entfernen Sie die horizontale Verschiebung
+        overflow: auto;
+        z-index: 1;
     }
 `;
 
@@ -57,6 +71,18 @@ export const CardContainer = styled.div`
     align-items: center;
     flex-direction: row;
     gap: 20px;
+    
+    
+    @media ${device.mobile} {
+        overflow: auto;
+        gap: 10px;
+        flex-wrap: wrap; // Fügt Flexibilität hinzu, indem es das Umbruchverhalten ändert
+        display: flex;
+        justify-content: space-around; // Ändert die Ausrichtung der Elemente
+        align-items: flex-start; // Ändert die Ausrichtung der Elemente
+        flex-direction: row;
+        gap: 20px;
+    }
 `;
 
 export const Container = styled.div`
@@ -64,11 +90,18 @@ export const Container = styled.div`
     border-radius: 20px;
     padding: 30px;
     max-width: 700px;
-    margin: 0 auto;
+    margin: 40px;
     background-color: rgba(255, 255, 255, 0.8);
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    flex-wrap: wrap;
-    margin: 40px;
+
+    @media ${device.mobile} {
+        overflow: auto;
+        padding: 10px;
+        max-width: 80%;
+        
+        margin: 30px;
+        flex-wrap: wrap; // Fügt Flexibilität hinzu, indem es das Umbruchverhalten ändert
+    }
 `;
 
 export const Image = styled.img`
@@ -77,24 +110,39 @@ export const Image = styled.img`
     border-radius: 50%;
     float: left;
     margin-right: 20px;
+    @media ${device.mobile} {
+        width: 80px;
+        height: 80px;
+        margin-right: 10px;
+    }
 `;
 
 export const Quote = styled.p`
     font-style: italic;
     font-size: 1.2em;
     color: #000;
+    @media ${device.mobile} {
+        font-size: 0.9em;
+    }
 `;
 
 export const Text = styled.p`
-    font-size: 1.4em;
+    font-size: 1.2em;
     color: #000;
+    @media ${device.mobile} {
+        font-size: 0.9em;
+    }
 `;
 
 export const Title = styled.h1`
-    font-size: 2em;
+    font-size: 1.5em;
     color: #000;
     margin-bottom: 10px;
     justify-content: center;
     text-transform: uppercase;
     letter-spacing: 0.4em;
+    @media ${device.mobile} {
+        font-size: 1.2em;
+        margin-bottom: 5px;
+    }
 `;

@@ -1,6 +1,11 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
+const device = {
+    mobile: `(max-width: 768px)`
+};
+
+
 export const StyledNav = styled.nav`
     display: flex;
     margin-top: 0;
@@ -39,6 +44,28 @@ export const StyledNav = styled.nav`
             transform: scale(1.1);
         }
     }
+    @media ${device.mobile} {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 15px;
+        flex-wrap: wrap;
+        height: auto;
+       
+
+        .language-selector {
+            position: static;
+            
+            margin-bottom: 20px;
+            width: 100%; // Fügt Flexibilität hinzu, indem es die Breite auf 100% setzt
+        }
+
+        a {
+            margin: 20px 0;
+            width: 100%; // Fügt Flexibilität hinzu, indem es die Breite auf 100% setzt
+        }
+    }
+
 `;
 
 export const StyledUl = styled.ul`
@@ -50,7 +77,7 @@ export const StyledUl = styled.ul`
 
 export const StyledLinkd = styled(Link)`
     color: #fff;
-    
+    padding: 9px;
     font-size: 1.2em;
     transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
 

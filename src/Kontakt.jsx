@@ -9,7 +9,6 @@ import img3 from "./mail.png";
 import { Fade } from 'react-awesome-reveal';
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
-import axios from "axios";
 
 
 function Kontakt() {
@@ -26,25 +25,7 @@ function Kontakt() {
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
-
-
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        try {
-            await axios.post('http://localhost:5000', formData);
-            alert('Nachricht gesendet!');
-            setFormData({
-                name: '',
-                vorname: '',
-                email: '',
-                message: ''
-            });
-        } catch (err) {
-            console.error(err);
-            alert('Es gab ein Problem beim Senden Ihrer Nachricht.');
-        }
-    };
-
+    
     const navigate = useNavigate();
     const handleButton = () => {
         navigate('/AboutMe');
@@ -57,17 +38,18 @@ function Kontakt() {
             <Navbar />
             <FormContainer>
             <Fade delay={200}>
-                <Form onSubmit={handleSubmit}>
+                <Form action="https://formsubmit.co/a.moelln@icloud.com" method="POST">
                 <Title>{t('Kontakt')}</Title>
                 <Subtitle>{t('Ich freue mich auf Ihre Nachricht!')}</Subtitle>
                     <Label>{t('Name')}</Label>
-                    <Input type="text" name="name" placeholder="Name" value={formData.name} onChange={handleChange} />
+                    <Input type="text" name="name" placeholder="Name" required value={formData.name} onChange={handleChange} />
                     <Label>{t('Vorname')}</Label>
                     <Input type="text" name="vorname" placeholder={t("Vorname")} value={formData.vorname} onChange={handleChange} />
                     <Label>{t('E-Mail Adresse')}</Label>
-                    <Input type="email" name="email" placeholder={t("E-Mail Adresse")} value={formData.email} onChange={handleChange} />
+                    <Input type="email" name="email" placeholder={t("E-Mail Adresse")} required value={formData.email} onChange={handleChange} />
                     <Label>{t('Ihre Nachricht')}</Label>
                     <TextArea name="message" placeholder={t("Ihre Nachricht")} value={formData.message} onChange={handleChange}></TextArea>
+                    <Input type="hidden" name="_next" value="https://amoelln.github.io/"/>
                     <Button type="submit">{t('Senden')}</Button>
                     <Subtitle>{t('Oder kontaktieren Sie mich über:')}</Subtitle>
                     <div style={{ display: 'flex', justifyContent: 'space-between', width: '300px', marginLeft: 'auto', marginRight: 'auto' }}>
