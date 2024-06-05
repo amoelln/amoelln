@@ -1,14 +1,10 @@
 import React from "react";
-import {} from "./HomepageStyle";
 import {  PageContainer ,Container, Image, Quote, Text, Title, BackgroundVideo, CardContainer } from "./AboutMeStyle";
 import Navbar from "./Navbar";
 import MyPicture from "./ich2.jpg";
 import { Fade} from 'react-awesome-reveal';
 import { useTranslation } from "react-i18next";
 import video from "./video.mp4";
-import { RoundButton } from "./HomepageStyle";
-import { RoundButton2 } from "./AboutMeStyle";
-import {useNavigate} from 'react-router-dom';
 import Skills from "./Skills";
 
 
@@ -16,19 +12,9 @@ function AboutMe() {
 
     const { t } = useTranslation();
 
-    const navigate = useNavigate();
-    const handleButton = () => {
-        navigate('/');
-    }
-
-    const handleButtondown = () => {
-        navigate('/Kontakt');
-    }
-
     return (
         <PageContainer>
-            <RoundButton2 onClick={handleButton}>&#8593;</RoundButton2>
-            <BackgroundVideo autoPlay loop muted src={video} type="video/mp4" />
+            <BackgroundVideo autoPlay loop muted playsInline src={video} type="video/mp4" />
                 <Navbar />
                 <CardContainer>
                 <Fade delay={100}>
@@ -44,7 +30,6 @@ function AboutMe() {
                     <Skills/>
                 </Fade>
                 </CardContainer>
-                <RoundButton onClick={handleButtondown}>&#8595;</RoundButton>
         </PageContainer>    
     );
 }

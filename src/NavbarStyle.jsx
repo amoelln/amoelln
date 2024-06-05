@@ -2,7 +2,8 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 const device = {
-    mobile: `(max-width: 768px)`
+    mobile: `(max-width: 768px)`,
+    mobile_ios: `(max-width: 768px)`
 };
 
 
@@ -48,7 +49,7 @@ export const StyledNav = styled.nav`
         flex-direction: column;
         align-items: flex-start;
         justify-content: flex-start;
-        padding: 15px;
+        padding: 5px;
         flex-wrap: wrap;
         height: auto;
        
@@ -57,14 +58,36 @@ export const StyledNav = styled.nav`
             position: static;
             
             margin-bottom: 20px;
-            width: 100%; // Fügt Flexibilität hinzu, indem es die Breite auf 100% setzt
+            width: 100%; 
         }
 
         a {
             margin: 20px 0;
-            width: 100%; // Fügt Flexibilität hinzu, indem es die Breite auf 100% setzt
+            width: 100%;
         }
     }
+    @media ${device.mobile_ios} {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 5px;
+        flex-wrap: wrap;
+        height: auto;
+       
+
+        .language-selector {
+            position: static;
+            
+            margin-bottom: 20px;
+            width: 100%;
+        }
+
+        a {
+            margin: 20px 0;
+            width: 100%;
+        }
+    }
+
 
 `;
 
@@ -109,12 +132,12 @@ export const LogoContainer = styled.div`
   gap: 15px; // Erzeugt einen Abstand zwischen dem Logo und dem Text
 
   img {
-    width: 50px; // Ändern Sie dies auf die gewünschte Breite des Logos
-    height: 50px; // Ändern Sie dies auf die gewünschte Höhe des Logos
+    width: 50px; 
+    height: 50px; 
   }
 
   h1 {
     font-size: 1.5em;
-    color: #fff; // Ändern Sie dies auf die gewünschte Farbe
+    color: #fff;
   }
 `;

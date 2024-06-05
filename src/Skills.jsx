@@ -10,7 +10,6 @@ function Skills() {
     const { t } = useTranslation();
 
     return (
-        <PageContainer>
             <CardContainer>
                 <Fade delay={100}>
                     <Card>
@@ -27,7 +26,6 @@ function Skills() {
                     </Card>
                 </Fade>
             </CardContainer>
-        </PageContainer>
     );
 }
 

@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
 const device = {
-    mobile: `(max-width: 768px)`
+    mobile: `(max-width: 768px)`,
+    mobile_ios: `(max-width: 768px)`
 };
 
 
@@ -29,6 +30,18 @@ export const RoundButton2 = styled.button`
         transform: translateX(50%) scale(1.1); // Button beim Hover vergrößern
     }
     @media ${device.mobile} {
+        width: 60px;
+        height: 60px;
+        font-size: 30px;
+        line-height: 40px;
+        bottom: 20px; // Ändern Sie die Position nach unten
+        right: 20px; // Ändern Sie die Position nach rechts
+        transform: translateX(0); // Entfernen Sie die horizontale Verschiebung
+        overflow: auto;
+        z-index: 1;
+    }
+
+    @media ${device.mobile_ios} {
         width: 60px;
         height: 60px;
         font-size: 30px;
@@ -76,10 +89,21 @@ export const CardContainer = styled.div`
     @media ${device.mobile} {
         overflow: auto;
         gap: 10px;
-        flex-wrap: wrap; // Fügt Flexibilität hinzu, indem es das Umbruchverhalten ändert
+        flex-wrap: wrap; 
         display: flex;
-        justify-content: space-around; // Ändert die Ausrichtung der Elemente
-        align-items: flex-start; // Ändert die Ausrichtung der Elemente
+        justify-content: space-around; 
+        align-items: flex-start; 
+        flex-direction: row;
+        gap: 20px;
+    }
+    
+    @media ${device.mobile_ios} {
+        overflow: auto;
+        gap: 10px;
+        flex-wrap: wrap;
+        display: flex;
+        justify-content: space-around; 
+        align-items: flex-start; 
         flex-direction: row;
         gap: 20px;
     }
@@ -89,7 +113,7 @@ export const Container = styled.div`
     border: 1px solid #000;
     border-radius: 20px;
     padding: 30px;
-    max-width: 700px;
+    max-width: 600px;
     margin: 40px;
     background-color: rgba(255, 255, 255, 0.8);
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -100,7 +124,15 @@ export const Container = styled.div`
         max-width: 80%;
         
         margin: 30px;
-        flex-wrap: wrap; // Fügt Flexibilität hinzu, indem es das Umbruchverhalten ändert
+        flex-wrap: wrap; 
+    }
+    @media ${device.mobile_ios} {
+        overflow: auto;
+        padding: 10px;
+        max-width: 80%;
+        
+        margin: 30px;
+        flex-wrap: wrap; 
     }
 `;
 
@@ -115,6 +147,12 @@ export const Image = styled.img`
         height: 80px;
         margin-right: 10px;
     }
+
+    @media ${device.mobile_ios} {
+        width: 80px;
+        height: 80px;
+        margin-right: 10px;
+    }
 `;
 
 export const Quote = styled.p`
@@ -124,12 +162,20 @@ export const Quote = styled.p`
     @media ${device.mobile} {
         font-size: 0.9em;
     }
+
+    @media ${device.mobile_ios} {
+        font-size: 0.9em;
+    }
 `;
 
 export const Text = styled.p`
     font-size: 1.2em;
     color: #000;
     @media ${device.mobile} {
+        font-size: 0.9em;
+    }
+
+    @media ${device.mobile_ios} {
         font-size: 0.9em;
     }
 `;
@@ -142,6 +188,10 @@ export const Title = styled.h1`
     text-transform: uppercase;
     letter-spacing: 0.4em;
     @media ${device.mobile} {
+        font-size: 1.2em;
+        margin-bottom: 5px;
+    }
+    @media ${device.mobile_ios} {
         font-size: 1.2em;
         margin-bottom: 5px;
     }

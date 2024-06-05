@@ -2,45 +2,10 @@ import styled from 'styled-components';
 
 const device = {
     mobile: `(max-width: 768px)`,
+    mobile_ios: `(max-width: 768px)`,
     desktop: `(min-width: 769px)`
 };
 
-export const RoundButton = styled.button`
-    position: fixed;
-    bottom: 20px;
-    right: 50%;
-    transform: translateX(50%);
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    border: none;
-    background-color: rgba(255, 255, 255, 0.5);
-    color: #000;
-    font-size: 40px;
-    cursor: pointer;
-    text-align: center;
-    line-height: 60px;
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1); // Schatten hinzufügen
-    transition: all 0.3s ease 0s; // Übergang hinzufügen
-
-    &:hover {
-        background-color: rgba(255, 255, 255, 0.7); // Hover-Effekt hinzufügen
-        box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.2); // Schatten beim Hover vergrößern
-        transform: translateX(50%) scale(1.1); // Button beim Hover vergrößern
-    }
-
-    @media ${device.mobile} {
-            width: 60px;
-            height: 60px;
-            font-size: 30px;
-            line-height: 40px;
-            bottom: 20px; // Ändern Sie die Position nach unten
-            right: 20px; // Ändern Sie die Position nach rechts
-            transform: translateX(0); // Entfernen Sie die horizontale Verschiebung
-            overflow: auto;
-        }
-
-`;
 
 
 export const PageContainer = styled.section`
@@ -56,9 +21,15 @@ export const PageContainer = styled.section`
     overflow: hidden;
 
     @media ${device.mobile} {
-        flex-direction: column; // Ändern Sie die Flex-Richtung auf Spalte
-        justify-content: flex-start; // Ändern Sie die Ausrichtung auf den Anfang
-        padding-top: 80px; // Fügen Sie oben einen Abstand hinzu
+        flex-direction: column; 
+        justify-content: flex-start; 
+        padding-top: 80px; 
+    }
+
+    @media ${device.mobile_ios} {
+        flex-direction: column; 
+        justify-content: flex-start; 
+        padding-top: 80px; 
     }
 `;
 

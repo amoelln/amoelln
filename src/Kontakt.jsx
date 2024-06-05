@@ -1,8 +1,7 @@
 import React from "react";
-import {Label, Title, Subtitle, BackgroundVideo, FormContainer, Form, Input, TextArea, Button, PageContainer, RoundButton2 } from './KontaktStyle';
+import {Label, Title, Subtitle, BackgroundVideo, FormContainer, Form, Input, TextArea, Button, PageContainer} from './KontaktStyle';
 import video from "./video.mp4";
 import Navbar from "./Navbar";
-import { useNavigate } from "react-router-dom";
 import img from "./git.png";
 import img2 from "./link.png";
 import img3 from "./mail.png";
@@ -26,15 +25,9 @@ function Kontakt() {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
     
-    const navigate = useNavigate();
-    const handleButton = () => {
-        navigate('/AboutMe');
-    }
-
     return (
         <PageContainer>
-            <BackgroundVideo autoPlay loop muted src={video} type="video/mp4" />
-            <RoundButton2 onClick={handleButton}>&#8593;</RoundButton2>
+            <BackgroundVideo autoPlay loop muted playsInline src={video} type="video/mp4" />
             <Navbar />
             <FormContainer>
             <Fade delay={200}>
