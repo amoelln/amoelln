@@ -3,7 +3,8 @@ import styled from 'styled-components';
 const device = {
     mobile: `(max-width: 768px)`,
     mobile_ios: `(max-width: 768px)`,
-    desktop: `(min-width: 769px)`
+    desktop: `(min-width: 769px)`,
+    laptop: `(min-device-width: 1024px) and (max-device-width: 1366px)`
 };
 
 
@@ -18,6 +19,9 @@ export const Label = styled.label`
     }
     @media ${device.mobile_ios} {
         font-size: 12px;
+    }
+    @media ${device.laptop} {
+        font-size: 16px;
     }
 `;
 
@@ -70,6 +74,12 @@ export const Form = styled.form`
         height: auto;
         padding: 10px;
     }
+    @media ${device.laptop} {
+        width: 800px;
+        height: 700px;
+        padding: 20px;
+    }
+
 `;
 
 export const Input = styled.input`
@@ -86,6 +96,10 @@ export const Input = styled.input`
     @media ${device.mobile_ios} {
         margin-bottom: 5px;
         padding: 5px;
+    }
+    @media ${device.laptop} {
+        margin-bottom: 10px;
+        padding: 10px;
     }
 `;
 
@@ -105,6 +119,12 @@ export const TextArea = styled.textarea`
         margin-bottom: 5px;
         padding: 5px;
     }
+
+    @media ${device.laptop} {
+        margin-bottom: 10px;
+        padding: 10px;
+    }
+
 `;
 
 export const Button = styled.button`
@@ -124,6 +144,10 @@ export const Button = styled.button`
         padding: 5px;
         font-size: 12px;
     }
+    @media ${device.laptop} {
+        padding: 10px;
+        font-size: 16px;
+    }
 `;
 
 export const Title = styled.h1`
@@ -139,6 +163,9 @@ export const Title = styled.h1`
     }
     @media ${device.mobile_ios} {
         font-size: 18px;
+    }
+    @media ${device.laptop} {
+        font-size: 20px;
     }
 
 `;
@@ -157,4 +184,8 @@ export const Subtitle = styled.p`
     @media ${device.mobile_ios} {
         font-size: 16px;
     }
+    @media ${device.laptop} {
+        font-size: 18px;
+    }
+
 `;

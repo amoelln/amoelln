@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 
 const device = {
-    mobile: `(max-width: 768px)`
+    mobile: `(max-width: 768px)`,
+    laptop: `(min-device-width: 1024px) and (max-device-width: 1366px)`
 };
 
 export const CardContainer = styled.div`
@@ -14,6 +15,10 @@ export const CardContainer = styled.div`
         flex-direction: column;
         align-items: center;
 
+    }
+
+    @media ${device.laptop} {
+        flex-direction: row;
     }
 
 `;
@@ -32,6 +37,10 @@ export const Card = styled.div`
         margin: 0px;
     }
 
+    @media ${device.laptop} {
+        max-width: 700px;
+        margin: 40px;
+    }
 `;
 export const Title1 = styled.h1`
     font-size: 1.5em;
@@ -44,6 +53,11 @@ export const Title1 = styled.h1`
     @media ${device.mobile} {
         font-size: 1.2em;
         margin-bottom: 20px;
+    }
+
+    @media ${device.laptop} {
+        font-size: 1.5em;
+        margin-bottom: 30px;
     }
     `;
 
@@ -61,6 +75,12 @@ export const Title = styled.h2`
         margin-bottom: 20px;
     }
 
+    @media ${device.laptop} {
+        font-size: 1.5em;
+        margin-bottom: 30px;
+    }
+
+
 `;
 
 export const Item = styled.li`
@@ -74,5 +94,10 @@ export const Item = styled.li`
     @media ${device.mobile} {
         font-size: 0.9em;
         margin-bottom: 30px;
+    }
+
+    @media ${device.laptop} {
+        font-size: 1.2em;
+        margin-bottom: 60px;
     }
 `;

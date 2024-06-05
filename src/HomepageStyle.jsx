@@ -3,7 +3,8 @@ import styled from 'styled-components';
 const device = {
     mobile: `(max-width: 768px)`,
     mobile_ios: `(max-width: 768px)`,
-    desktop: `(min-width: 769px)`
+    desktop: `(min-width: 769px)`,
+    laptop: `(min-device-width: 1024px) and (max-device-width: 1366px)`
 };
 
 
@@ -27,6 +28,12 @@ export const PageContainer = styled.section`
     }
 
     @media ${device.mobile_ios} {
+        flex-direction: column; 
+        justify-content: flex-start; 
+        padding-top: 80px; 
+    }
+
+    @media ${device.laptop} {
         flex-direction: column; 
         justify-content: flex-start; 
         padding-top: 80px; 

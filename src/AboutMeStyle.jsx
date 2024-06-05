@@ -2,57 +2,10 @@ import styled from "styled-components";
 
 const device = {
     mobile: `(max-width: 768px)`,
-    mobile_ios: `(max-width: 768px)`
+    mobile_ios: `(max-width: 768px)`,
+    laptop: `(min-device-width: 1024px) and (max-device-width: 1366px)`
 };
 
-
-export const RoundButton2 = styled.button`
-    position: fixed;
-    top: 100px;
-    right: 50%;
-    transform: translateX(50%);
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    border: none;
-    background-color: rgba(255, 255, 255, 0.5);
-    color: #000;
-    font-size: 40px;
-    cursor: pointer;
-    text-align: center;
-    line-height: 60px;
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1); // Schatten hinzufügen
-    transition: all 0.3s ease 0s; // Übergang hinzufügen
-
-    &:hover {
-        background-color: rgba(255, 255, 255, 0.7); // Hover-Effekt hinzufügen
-        box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.2); // Schatten beim Hover vergrößern
-        transform: translateX(50%) scale(1.1); // Button beim Hover vergrößern
-    }
-    @media ${device.mobile} {
-        width: 60px;
-        height: 60px;
-        font-size: 30px;
-        line-height: 40px;
-        bottom: 20px; // Ändern Sie die Position nach unten
-        right: 20px; // Ändern Sie die Position nach rechts
-        transform: translateX(0); // Entfernen Sie die horizontale Verschiebung
-        overflow: auto;
-        z-index: 1;
-    }
-
-    @media ${device.mobile_ios} {
-        width: 60px;
-        height: 60px;
-        font-size: 30px;
-        line-height: 40px;
-        bottom: 20px; // Ändern Sie die Position nach unten
-        right: 20px; // Ändern Sie die Position nach rechts
-        transform: translateX(0); // Entfernen Sie die horizontale Verschiebung
-        overflow: auto;
-        z-index: 1;
-    }
-`;
 
 
 
@@ -107,6 +60,16 @@ export const CardContainer = styled.div`
         flex-direction: row;
         gap: 20px;
     }
+
+    @media ${device.laptop} {
+        gap: 20px;
+        flex-wrap: wrap;
+        display: flex;
+        justify-content: space-around; 
+        align-items: flex-start; 
+        flex-direction: row;
+        gap: 20px;
+    }
 `;
 
 export const Container = styled.div`
@@ -134,6 +97,12 @@ export const Container = styled.div`
         margin: 30px;
         flex-wrap: wrap; 
     }
+
+    @media ${device.laptop} {
+        padding: 30px;
+        max-width: 600px;
+        margin: 40px;
+    }
 `;
 
 export const Image = styled.img`
@@ -153,6 +122,13 @@ export const Image = styled.img`
         height: 80px;
         margin-right: 10px;
     }
+
+    @media ${device.laptop} {
+        width: 150px;
+        height: 150px;
+        margin-right: 20px;
+    }
+
 `;
 
 export const Quote = styled.p`
@@ -166,6 +142,10 @@ export const Quote = styled.p`
     @media ${device.mobile_ios} {
         font-size: 0.9em;
     }
+
+    @media ${device.laptop} {
+        font-size: 1.2em;
+    }
 `;
 
 export const Text = styled.p`
@@ -178,6 +158,11 @@ export const Text = styled.p`
     @media ${device.mobile_ios} {
         font-size: 0.9em;
     }
+
+    @media ${device.laptop} {
+        font-size: 1.2em;
+    }
+
 `;
 
 export const Title = styled.h1`
@@ -194,5 +179,10 @@ export const Title = styled.h1`
     @media ${device.mobile_ios} {
         font-size: 1.2em;
         margin-bottom: 5px;
+    }
+
+    @media ${device.laptop} {
+        font-size: 1.5em;
+        margin-bottom: 10px;
     }
 `;
