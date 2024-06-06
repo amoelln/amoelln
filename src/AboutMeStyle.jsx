@@ -3,8 +3,9 @@ import styled from "styled-components";
 const device = {
     mobile: `(max-width: 768px)`,
     mobile_ios: `(max-width: 768px)`,
-    laptop: `(min-device-width: 1024px) and (max-device-width: 1366px)`
+    laptop: `(min-device-width: 769px) and (max-device-width: 1366px)`
 };
+   
 
 
 
@@ -61,15 +62,9 @@ export const CardContainer = styled.div`
         gap: 20px;
     }
 
-    @media ${device.laptop} {
-        gap: 20px;
-        flex-wrap: wrap;
-        display: flex;
-        justify-content: space-around; 
-        align-items: flex-start; 
-        flex-direction: row;
-        gap: 20px;
-    }
+
+
+   
 `;
 
 export const Container = styled.div`
@@ -98,11 +93,7 @@ export const Container = styled.div`
         flex-wrap: wrap; 
     }
 
-    @media ${device.laptop} {
-        padding: 30px;
-        max-width: 600px;
-        margin: 40px;
-    }
+   
 `;
 
 export const Image = styled.img`
@@ -112,21 +103,15 @@ export const Image = styled.img`
     float: left;
     margin-right: 20px;
     @media ${device.mobile} {
-        width: 80px;
-        height: 80px;
+        width: 60px;
+        height: 60px;
         margin-right: 10px;
     }
 
     @media ${device.mobile_ios} {
-        width: 80px;
-        height: 80px;
+        width: 60px;
+        height: 60px;
         margin-right: 10px;
-    }
-
-    @media ${device.laptop} {
-        width: 150px;
-        height: 150px;
-        margin-right: 20px;
     }
 
 `;
@@ -136,31 +121,24 @@ export const Quote = styled.p`
     font-size: 1.2em;
     color: #000;
     @media ${device.mobile} {
-        font-size: 0.9em;
+        font-size: 0.8em;
     }
 
     @media ${device.mobile_ios} {
-        font-size: 0.9em;
+        font-size: 0.8em;
     }
 
-    @media ${device.laptop} {
-        font-size: 1.2em;
-    }
 `;
 
 export const Text = styled.p`
     font-size: 1.2em;
     color: #000;
     @media ${device.mobile} {
-        font-size: 0.9em;
+        font-size: 0.8em;
     }
 
     @media ${device.mobile_ios} {
-        font-size: 0.9em;
-    }
-
-    @media ${device.laptop} {
-        font-size: 1.2em;
+        font-size: 0.8em;
     }
 
 `;
@@ -173,16 +151,12 @@ export const Title = styled.h1`
     text-transform: uppercase;
     letter-spacing: 0.4em;
     @media ${device.mobile} {
-        font-size: 1.2em;
+        font-size: 1em;
         margin-bottom: 5px;
     }
     @media ${device.mobile_ios} {
-        font-size: 1.2em;
+        font-size: 1em;
         margin-bottom: 5px;
     }
 
-    @media ${device.laptop} {
-        font-size: 1.5em;
-        margin-bottom: 10px;
-    }
 `;

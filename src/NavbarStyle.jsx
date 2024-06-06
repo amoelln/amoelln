@@ -26,11 +26,12 @@ export const StyledNav = styled.nav`
         border: none;
         background: black;
         color: #000;
-        padding: 5px 10px;
+        padding: 5px 8px;
         font-size: 1em;
         border-radius: 5px;
         cursor: pointer;
         outline: none;
+        margin-left: 20px;
     }
 
     a {
@@ -45,26 +46,44 @@ export const StyledNav = styled.nav`
             transform: scale(1.1);
         }
     }
+   @media ${device.mobile} {
+    a {
+        font-size: 0.8em;
+        margin: 20px 0;
+        width: 100%;
+    }
+    @media ${device.mobile_ios} {
+    a {
+        font-size: 0.8em;
+        margin: 20px 0;
+        width: 100%;
+    }
+    }
+    }
+
+
+`;
+
+export const LanguageSelector = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 0.8em;
+    margin-left: 20px;
+    width: 100%;
+
     @media ${device.mobile} {
+        
         flex-direction: column;
         align-items: flex-start;
         justify-content: flex-start;
         padding: 5px;
         flex-wrap: wrap;
         height: auto;
+        margin-left: 0;
+        
+
        
-
-        .language-selector {
-            position: static;
-            
-            margin-bottom: 20px;
-            width: 100%; 
-        }
-
-        a {
-            margin: 20px 0;
-            width: 100%;
-        }
     }
     @media ${device.mobile_ios} {
         flex-direction: column;
@@ -73,23 +92,14 @@ export const StyledNav = styled.nav`
         padding: 5px;
         flex-wrap: wrap;
         height: auto;
-       
+        margin-left: 0;
+        margin-bottom: 40px;
+       width: 100%;
 
-        .language-selector {
-            position: static;
-            
-            margin-bottom: 20px;
-            width: 100%;
-        }
-
-        a {
-            margin: 20px 0;
-            width: 100%;
-        }
-    }
-
-
+     
 `;
+
+
 
 export const StyledUl = styled.ul`
     list-style: none;
@@ -122,22 +132,3 @@ export const NavContainer = styled.nav`
     padding: 10px;
 `;
 
-export const LogoContainer = styled.div`
-  position: absolute;
-  top: 20px;
-  left: 15px;
-
-  display: flex;
-  align-items: center;
-  gap: 15px; // Erzeugt einen Abstand zwischen dem Logo und dem Text
-
-  img {
-    width: 50px; 
-    height: 50px; 
-  }
-
-  h1 {
-    font-size: 1.5em;
-    color: #fff;
-  }
-`;

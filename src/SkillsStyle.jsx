@@ -51,7 +51,7 @@ export const Title1 = styled.h1`
     letter-spacing: 0.1em;  
 
     @media ${device.mobile} {
-        font-size: 1.2em;
+        font-size: 1em;
         margin-bottom: 20px;
     }
 
@@ -71,8 +71,8 @@ export const Title = styled.h2`
     letter-spacing: 0.1em;
 
     @media ${device.mobile} {
-        font-size: 1.2em;
-        margin-bottom: 20px;
+        font-size: 1em;
+        margin-bottom: 30px;
     }
 
     @media ${device.laptop} {
@@ -92,7 +92,7 @@ export const Item = styled.li`
     letter-spacing: 0.7em;
 
     @media ${device.mobile} {
-        font-size: 0.9em;
+        font-size: 0.8em;
         margin-bottom: 30px;
     }
 

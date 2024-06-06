@@ -1,6 +1,6 @@
 import React from "react";
 import { useTranslation } from 'react-i18next';
-import {StyledNav , NavContainer , StyledLinkd , StyledUl } from "./NavbarStyle";
+import {StyledNav , NavContainer , StyledLinkd , StyledUl, LanguageSelector } from "./NavbarStyle";
 
 const Navbar = () => {
     const { t, i18n } = useTranslation();
@@ -11,10 +11,12 @@ const Navbar = () => {
 
     return (
         <StyledNav>
+            <LanguageSelector>
             <div className="language-selector">
                 <a href="#" onClick={() => changeLanguage('en')}>EN</a> / 
                 <a href="#" onClick={() => changeLanguage('de')}>DE</a>
             </div>
+            </LanguageSelector>
             <StyledUl>
                 <NavContainer>
                     <li>

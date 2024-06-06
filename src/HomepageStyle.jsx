@@ -55,12 +55,28 @@ export const Title = styled.h1`
     text-transform: uppercase;
     margin-bottom: 0.5em;
     color: #fff;
+
+    @media ${device.mobile} {
+        font-size: 1.5em;
+    }
+
+    @media ${device.mobile_ios} {
+        font-size: 1.5em;
+    }
 `;
 
 export const Subtitle = styled.p`
     font-size: 1.2em;
     margin-bottom: 1em;
     color: #fff;
+
+    @media ${device.mobile} {
+        font-size: 1em;
+    }
+
+    @media ${device.mobile_ios} {
+        font-size: 1em;
+    }
 `;
 
 export const Button = styled.button`
