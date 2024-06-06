@@ -130,7 +130,7 @@ export const Quote = styled.p`
 export const Text = styled.p`
     font-size: 1.2em;
     color: #000;
-    text-align: justify;
+    text-align: left;
     @media ${device.mobile} {
 
         font-size: 0.8em;
