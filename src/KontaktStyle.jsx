@@ -49,11 +49,32 @@ export const BackgroundVideo = styled.video`
 `;
 
 export const FormContainer = styled.div`
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: row;
+gap: 20px;
+
+@media ${device.mobile} {
+    overflow: auto;
+    flex-wrap: wrap; 
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background: rgba(0, 0, 0, 0.5);
+    justify-content: space-around; 
+    align-items: flex-start; 
+    flex-direction: row;
+    gap: 20px;
+}
+
+@media ${device.mobile_ios} {
+    overflow: auto;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-around; 
+    align-items: flex-start; 
+    flex-direction: row;
+    gap: 20px;
+}
+
 `;
 
 export const Form = styled.form`

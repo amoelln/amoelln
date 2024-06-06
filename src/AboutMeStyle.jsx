@@ -42,7 +42,6 @@ export const CardContainer = styled.div`
     
     @media ${device.mobile} {
         overflow: auto;
-        gap: 10px;
         flex-wrap: wrap; 
         display: flex;
         justify-content: space-around; 
@@ -53,7 +52,6 @@ export const CardContainer = styled.div`
     
     @media ${device.mobile_ios} {
         overflow: auto;
-        gap: 10px;
         flex-wrap: wrap;
         display: flex;
         justify-content: space-around; 
@@ -80,7 +78,6 @@ export const Container = styled.div`
         overflow: auto;
         padding: 10px;
         max-width: 80%;
-        
         margin: 30px;
         flex-wrap: wrap; 
     }
@@ -88,7 +85,6 @@ export const Container = styled.div`
         overflow: auto;
         padding: 10px;
         max-width: 80%;
-        
         margin: 30px;
         flex-wrap: wrap; 
     }
