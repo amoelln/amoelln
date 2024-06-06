@@ -120,6 +120,7 @@ export const Quote = styled.p`
     font-style: italic;
     font-size: 1.2em;
     color: #000;
+    text-align: justify;
     @media ${device.mobile} {
         font-size: 0.8em;
     }
@@ -133,7 +134,9 @@ export const Quote = styled.p`
 export const Text = styled.p`
     font-size: 1.2em;
     color: #000;
+    text-align: justify;
     @media ${device.mobile} {
+
         font-size: 0.8em;
     }
 

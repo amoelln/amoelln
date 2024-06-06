@@ -10,6 +10,7 @@ export const CardContainer = styled.div`
     justify-content: space-around;
     flex-wrap: wrap;
 
+
     
     @media ${device.mobile} {
         flex-direction: column;
@@ -64,11 +65,12 @@ export const Title1 = styled.h1`
 
 export const Title = styled.h2`
     font-size: 1.5em;
+    text-align: center;
     font-family: 'Arial', sans-serif;
     margin-bottom: 30px;
     color: #000;
     text-transform: uppercase;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.3em;
 
     @media ${device.mobile} {
         font-size: 1em;
@@ -88,8 +90,10 @@ export const Item = styled.li`
     font-size: 1.2em;
     margin-bottom: 60px;
     color: #000;
+    margin-left: -20px;
     text-transform: uppercase;
     letter-spacing: 0.7em;
+    text-align: center;
 
     @media ${device.mobile} {
         font-size: 0.8em;
