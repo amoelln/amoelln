@@ -142,6 +142,8 @@ export const Text = styled.p`
 
 `;
 
+
+
 export const Title = styled.h1`
     font-size: 1.5em;
     color: #000;
