@@ -6,6 +6,7 @@ import { Fade} from 'react-awesome-reveal';
 import { useTranslation } from "react-i18next";
 import video from "./video.mp4";
 import Skills from "./Skills";
+import { Titleb } from "./BlogStyle";
 
 
 function AboutMe() {
@@ -16,6 +17,7 @@ function AboutMe() {
         <PageContainer>
             <BackgroundVideo autoPlay loop muted playsInline src={video} type="video/mp4" />
                 <Navbar />
+                <Titleb>{t("IT's ME")}</Titleb>
                 <CardContainer>
                 <Fade delay={100}>
                 <Container>

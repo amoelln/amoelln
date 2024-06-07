@@ -23,6 +23,9 @@ const Navbar = () => {
                         <StyledLinkd to="/">{t('Home')}</StyledLinkd>
                     </li>
                     <li>
+                        <StyledLinkd to = "/Blog">{t('Mein Blog')}</StyledLinkd>
+                    </li>
+                    <li>
                         <StyledLinkd to="/AboutMe">{t('About Me')}</StyledLinkd>
                     </li>
                     <li>
