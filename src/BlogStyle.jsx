@@ -39,3 +39,11 @@ export const StyledMarkdown = styled.div`
     color: black;
     font-size: 1.3rem;
     `;
+
+export const Image = styled.img`
+    width: 50%;
+    height: 50%;
+    object-fit: cover;
+    border-radius: 10px;
+
+`;
