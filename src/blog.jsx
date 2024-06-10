@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from "react";
 import Navbar from "./Navbar";
-import {PageContainer, BackgroundVideo, Titleb, StyledMarkdown , Image} from "./BlogStyle";
+import {PageContainer, BackgroundVideo, Titleb, StyledMarkdown } from "./BlogStyle";
 import video from "./video.mp4";
 import { Card } from "./SkillsStyle";
 import { CardContainer } from "./AboutMeStyle";
-import image from "./blog.jpg";
 import {Fade} from 'react-awesome-reveal';
 
 
@@ -45,7 +44,6 @@ const Blog = () => {
             <CardContainer>
             {posts.map((post, index) => (
                 <Card key={index}>
-                    <Image src={image} alt="Blog" />
                     <StyledMarkdown>{post.content}</StyledMarkdown>
                 </Card>    
             ))}
