@@ -5,6 +5,7 @@ import video from "./video.mp4";
 import { Card } from "./SkillsStyle";
 import { CardContainer } from "./AboutMeStyle";
 import {Fade} from 'react-awesome-reveal';
+import blog from './blog.jpg'
 
 
 
@@ -28,7 +29,8 @@ const Blog = () => {
         .then(texts => {
             const posts = texts.map((text, index) => ({
                 slug: markdownFiles[index].slug,
-                content: text
+                content: text,
+                image: markdownFiles[index].image
             }));
             console.log(posts)
             setPosts(posts);
@@ -43,14 +45,19 @@ const Blog = () => {
             <Fade delay={100}>
             <CardContainer>
             {posts.map((post, index) => (
-                <Card key={index}>
-                    <StyledMarkdown>{post.content}</StyledMarkdown>
+                <Card key={index} style={{ display: 'flex', alignItems: 'center', marginBottom: '20px' }}>
+                    <div style={{ flex: '1' }}>
+                        <img src={blog} alt="" style={{ width: '100%', height: 'auto'}} />
+                    </div>
+                    <div style={{ flex: '2', paddingLeft: '20px' }}>
+                        <StyledMarkdown>{post.content}</StyledMarkdown>
+                    </div>
                 </Card>    
             ))}
             </CardContainer>
             </Fade>
         </PageContainer>
     );
-};
+}
 
 export default Blog;
