@@ -8,6 +8,7 @@ import img3 from "./mail.png";
 import { Fade } from 'react-awesome-reveal';
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
+import { Titleb } from "./BlogStyle";
 
 
 function Kontakt() {
@@ -29,6 +30,7 @@ function Kontakt() {
         <PageContainer>
             <BackgroundVideo autoPlay loop muted playsInline src={video} type="video/mp4" />
             <Navbar />
+            <Titleb>{t("Let's talk!")}</Titleb>
             <FormContainer>
             <Fade delay={200}>
                 <Form action="https://formsubmit.co/a.moelln@icloud.com" method="POST">

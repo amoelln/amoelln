@@ -2,10 +2,10 @@ import React, { useState, useEffect } from "react";
 import Navbar from "./Navbar";
 import {PageContainer, BackgroundVideo, Titleb, StyledMarkdown } from "./BlogStyle";
 import video from "./video.mp4";
-import { Card } from "./SkillsStyle";
+import { Card } from "./BlogStyle";
 import { CardContainer } from "./AboutMeStyle";
 import {Fade} from 'react-awesome-reveal';
-import blog from './blog.jpg'
+
 
 
 
@@ -46,12 +46,9 @@ const Blog = () => {
             <CardContainer>
             {posts.map((post, index) => (
                 <Card key={index} style={{ display: 'flex', alignItems: 'center', marginBottom: '20px' }}>
-                    <div style={{ flex: '1' }}>
-                        <img src={blog} alt="" style={{ width: '100%', height: 'auto'}} />
+                    <div style={{ flex: '1' }}>    
                     </div>
-                    <div style={{ flex: '2', paddingLeft: '20px' }}>
-                        <StyledMarkdown>{post.content}</StyledMarkdown>
-                    </div>
+                    <StyledMarkdown>{post.content}</StyledMarkdown>
                 </Card>    
             ))}
             </CardContainer>

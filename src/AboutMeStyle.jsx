@@ -15,12 +15,14 @@ export const PageContainer = styled.section`
     height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start; 
     align-items: center;
     color: #fff;
     text-align: center;
     letter-spacing: 1px;
     overflow: hidden;
+    padding-top: 50px;
+
 `;
 
 export const BackgroundVideo = styled.video`
