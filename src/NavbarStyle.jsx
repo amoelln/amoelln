@@ -67,7 +67,7 @@ export const StyledNav = styled.nav`
 export const LanguageSelector = styled.div`
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     font-size: 0.8em;
     margin-left: 20px;
     width: 100%;

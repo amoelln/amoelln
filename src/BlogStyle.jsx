@@ -17,6 +17,7 @@ export const PageContainer = styled.section`
     letter-spacing: 1px;
     overflow: hidden;
     padding-top: 50px;
+    
 `;
 
 export const BackgroundVideo = styled.video`
@@ -45,13 +46,14 @@ export const Titleb = styled.h1`
 `;
 
 export const StyledMarkdown = styled.div`
-    color: black;
-    font-size: 1.3rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    gap: 20px;
+      font-size: 1rem;
+         overflow: auto;
+        flex-wrap: wrap; 
+        display: flex;
+        justify-content: space-around; 
+        align-items: flex-start; 
+        flex-direction: row;
+        gap: 20px;
     
 
 

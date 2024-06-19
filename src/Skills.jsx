@@ -1,5 +1,4 @@
 import React from "react";
-import { PageContainer} from "./HomepageStyle";
 import { Card, Title, Item, CardContainer } from "./SkillsStyle";
 import { useTranslation } from "react-i18next";
 import { Fade } from "react-awesome-reveal";

@@ -50,20 +50,21 @@ export const BackgroundVideo = styled.video`
 `;
 
 export const FormContainer = styled.div`
-display: flex;
-justify-content: center;
-align-items: center;
-flex-direction: row;
-gap: 20px;
-
-@media ${device.mobile} {
-    overflow: auto;
-    flex-wrap: wrap; 
     display: flex;
-    justify-content: space-around; 
-    align-items: flex-start; 
+    justify-content: center;
+    align-items: center;
     flex-direction: row;
     gap: 20px;
+    margin-top: 50px;
+    width: 100%; 
+    max-width: 500px; 
+    margin-left: auto; 
+    margin-right: auto; 
+
+@media ${device.mobile}, ${device.mobile_ios} {
+    flex-direction: column; 
+    gap: 10px; 
+    max-width: 100%; 
 }
 
 @media ${device.mobile_ios} {
